@@ -1,0 +1,4 @@
+namespace DarkEngine {
+
+	void sayHello();
+}
