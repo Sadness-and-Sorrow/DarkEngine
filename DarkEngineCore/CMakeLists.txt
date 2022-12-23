@@ -2,9 +2,17 @@ cmake_minimum_required(VERSION 3.25)
 
 set(ENGINE_PROJECT_NAME DarkEngineCore)
 
+set(ENGINE_PUBLIC_INCLUDES
+	includes/DarkEngineCore/Application.h
+)
+
+set(ENGINE_PRIVATE_SOURCES
+	src/DarkEngineCore/Application.cpp
+)
+
 add_library(${ENGINE_PROJECT_NAME} STATIC
-	src/DarkEngineCore/Utils/engine.cpp
-	includes/DarkEngineCore/Utils/engine.h
+	${ENGINE_PUBLIC_INCLUDES}
+	${ENGINE_PRIVATE_SOURCES}
 )
 
 target_include_directories(${ENGINE_PROJECT_NAME} PUBLIC includes)
